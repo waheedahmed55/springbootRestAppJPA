@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+    localhostmysql:
+      build:
+        context: mySQL-Docker
+      image: mysqlofficalimg:latest
+      container_name: localhostmysql
+      ports:
+         - 3306:3306
+      networks:
+          - localnetwork
+    apprest:
+      container_name: apprest
+      build:
+        context: ./
+      image: apprest:latest
+      depends_on:
+         - localhostmysql
+      ports:
+          - 8081:8081
+      networks:
+          - localnetwork
+      
+      
+networks:
+  localnetwork: 

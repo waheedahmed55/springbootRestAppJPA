@@ -1,0 +1,3 @@
+docker run -d --name=docker-mysql --env="MYSQL_ROOT_PASSWORD=root" --env="MYSQL_PASSWORD=admin" --env="MYSQL_DATABASE=employer" mysql
+docker build -t app/demo .
+docker run -t --name spring-boot --link docker-mysql:mysql -p 8081:8081 app/demo
