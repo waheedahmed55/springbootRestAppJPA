@@ -1,4 +1,4 @@
-FROM store/oracle/serverjre:8
+FROM maven
 VOLUME /tmp
 COPY wait-for-it.sh wait-for-it.sh
 RUN chmod +x wait-for-it.sh
