@@ -2,7 +2,8 @@
 #Use this script to test if a given TCP host/port are available
 
 WAITFORIT_cmdname=${0##*/}
-
+cp target/*.jar App.jar
+echo "copied jar file"
 echoerr() { if [[ $WAITFORIT_QUIET -ne 1 ]]; then echo "$@" 1>&2; fi }
 
 usage()

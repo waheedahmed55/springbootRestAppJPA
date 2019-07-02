@@ -11,4 +11,4 @@ RUN ls /home/restapi/src
 RUN mvn package -f /restapi/pom.xml
 #COPY target/*.jar  App.jar
 EXPOSE 8081
-CMD ["cp target/*. App.jar","./wait-for-it.sh", "localhostmysql:3306","--","java", "-jar", "App.jar"]
+CMD ["./wait-for-it.sh", "localhostmysql:3306","--","java", "-jar", "App.jar"]
