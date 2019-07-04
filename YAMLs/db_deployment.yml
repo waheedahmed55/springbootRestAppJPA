@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: localhostmysql
+  labels:
+    app: localhostmysql
+spec:
+  selector:
+    matchLabels:
+      app: localhostmysql
+      tier: mysql
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: localhostmysql
+        tier: mysql
+    spec:
+      containers:
+      - image: us.gcr.io/synthetic-song-226517/demo/mysqlofficialimg:latest
+        name: mysql
+        ports:
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
