@@ -15,6 +15,10 @@ pipeline {
 		  
 		//registryCredential = 'dockerhublogin'
 		  registryCredential = 'gcr:synthetic-song-226517'
+		  
+		  test_dep = "demotest"
+          GOOGLE_PROJECT_ID = 'synthetic-song-226517';
+		  
 	
     }
 
@@ -93,6 +97,28 @@ pipeline {
             }
         }
 
+	    stage('Deploy the test') {
+
+            steps {
+
+                script {
+				sh """
+				curl -o /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-220.0.0-linux-x86_64.tar.gz;
+				tar -xvf /tmp/google-cloud-sdk.tar.gz -C /tmp/;
+				/tmp/google-cloud-sdk/install.sh -q;
+				export PATH=/tmp/google-cloud-sdk/bin:$PATH;
+				gcloud config set project ${GOOGLE_PROJECT_ID};
+				gcloud components install app-engine-java;
+				gcloud components install app-engine-python;
+				gcloud components install kubectl;
+				echo "After authentication gcloud"; 
+				kubectl run --image=${test_image} ${test_dep}
+				kubectl get pods;
+				""" 
+                }
+		    
+            }
+        }
 	    
 
     }
