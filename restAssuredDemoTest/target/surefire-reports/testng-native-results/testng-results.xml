@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="334292" started-at="2019-06-23T21:55:23Z" finished-at="2019-06-23T22:00:57Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="334292" started-at="2019-06-23T21:55:23Z" finished-at="2019-06-23T22:00:57Z">
+      <class name="com.restAssuredDocker.restAssuredDemoTest.EmployeeTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.restAssuredDocker.restAssuredDemoTest.EmployeeTest@1a407d53]" name="setUp" is-config="true" duration-ms="431" started-at="2019-06-23T21:55:23Z" finished-at="2019-06-23T21:55:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="SaveEmployeeTest()[pri:1, instance:com.restAssuredDocker.restAssuredDemoTest.EmployeeTest@1a407d53]" name="SaveEmployeeTest" duration-ms="11974" started-at="2019-06-23T21:55:23Z" finished-at="2019-06-23T21:55:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveEmployeeTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.restAssuredDocker.restAssuredDemoTest.EmployeeTest@1a407d53]" name="setUp" is-config="true" duration-ms="1" started-at="2019-06-23T21:55:35Z" finished-at="2019-06-23T21:55:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="UpdateEmployeeTest()[pri:2, instance:com.restAssuredDocker.restAssuredDemoTest.EmployeeTest@1a407d53]" name="UpdateEmployeeTest" duration-ms="111628" started-at="2019-06-23T21:55:35Z" finished-at="2019-06-23T21:57:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateEmployeeTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.restAssuredDocker.restAssuredDemoTest.EmployeeTest@1a407d53]" name="setUp" is-config="true" duration-ms="1" started-at="2019-06-23T21:57:27Z" finished-at="2019-06-23T21:57:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="GetAllEmployees()[pri:3, instance:com.restAssuredDocker.restAssuredDemoTest.EmployeeTest@1a407d53]" name="GetAllEmployees" duration-ms="110037" started-at="2019-06-23T21:57:27Z" finished-at="2019-06-23T21:59:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetAllEmployees -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.restAssuredDocker.restAssuredDemoTest.EmployeeTest@1a407d53]" name="setUp" is-config="true" duration-ms="1" started-at="2019-06-23T21:59:17Z" finished-at="2019-06-23T21:59:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="DeleteEmployeeById()[pri:4, instance:com.restAssuredDocker.restAssuredDemoTest.EmployeeTest@1a407d53]" name="DeleteEmployeeById" duration-ms="100179" started-at="2019-06-23T21:59:17Z" finished-at="2019-06-23T22:00:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteEmployeeById -->
+      </class> <!-- com.restAssuredDocker.restAssuredDemoTest.EmployeeTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

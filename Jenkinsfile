@@ -65,12 +65,30 @@ pipeline {
     			}
 
                 }
+          
+                
 
             }
 
         }
 
-	    
+	    stage('Building the Tests') {
+
+            steps {
+
+                script {
+
+			docker.withRegistry('https://us.gcr.io', registryCredential) {
+
+				def testImage = docker.build(test_image, "./restAssuredDemoTest")
+				testImage.push("$BUILD_NUMBER")
+				testImage.push("latest")
+				
+    			}
+                }
+		    
+            }
+        }
 
 	    
 
