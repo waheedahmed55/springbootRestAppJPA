@@ -10,6 +10,9 @@ pipeline {
 		  apprest_image = "us.gcr.io/synthetic-song-226517/demo/apprest"
 		//db_image = "waheedahmed/testjendb1"
 		  db_image = "us.gcr.io/synthetic-song-226517/demo/mysqlofficialimg"
+		  
+		  test_image = "us.gcr.io/synthetic-song-226517/demo/restassuredtests"
+		  
 		//registryCredential = 'dockerhublogin'
 		  registryCredential = 'gcr:synthetic-song-226517'
 	
