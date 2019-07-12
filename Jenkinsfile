@@ -112,7 +112,7 @@ pipeline {
 				gcloud components install app-engine-python;
 				gcloud components install kubectl;
 				echo "After authentication gcloud";
-				kubectl delete ${test_dep}; 
+				kubectl delete deployments/${test_dep}
 				kubectl run --image=${test_image} ${test_dep}
 				kubectl get pods;
 				""" 
